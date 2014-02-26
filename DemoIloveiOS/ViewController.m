@@ -73,22 +73,29 @@
 
 -(void)BMLocationIsFar:(CLBeacon *)beacon{
    
+    self.beaconStatus.text = @"FAR";
+    self.beaconRange.text = [NSString stringWithFormat:@"%d", beacon.rssi];
 
 }
 
 -(void) BMLocationIsNear:(CLBeacon *)beacon{
 
+    self.beaconStatus.text = @"NEAR";
+    self.beaconRange.text = [NSString stringWithFormat:@"%d", beacon.rssi];
+    
 }
 
 -(void) BMLocationIsInmediate:(CLBeacon *)beacon {
 
-
+    self.beaconStatus.text = @"INMEDIATE";
+    self.beaconRange.text = [NSString stringWithFormat:@"%d", beacon.rssi];
 
 }
 
 -(void) BMLocationIsUnknown:(CLBeacon *)beacon{
 
-
+    self.beaconStatus.text = @"UNKNOWN";
+    self.beaconRange.text = [NSString stringWithFormat:@"%d", beacon.rssi];
 
 }
 

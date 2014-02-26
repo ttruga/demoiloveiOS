@@ -33,6 +33,7 @@
                                 <rect key="frame" x="20" y="161" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="beacon range" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6D-Bd-CUM">
@@ -71,6 +72,7 @@
                         <outlet property="beaconName" destination="DoW-sG-r20" id="hWi-YH-jGK"/>
                         <outlet property="beaconRange" destination="g6D-Bd-CUM" id="pf3-6h-o8q"/>
                         <outlet property="beaconSelector" destination="8oL-9M-hdh" id="ZBq-eY-NF5"/>
+                        <outlet property="beaconStatus" destination="3ZK-R5-clf" id="b26-nK-wG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

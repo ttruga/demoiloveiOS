@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *beaconSelector;
 @property (strong, nonatomic) IBOutlet UILabel *beaconName;
 @property (strong, nonatomic) IBOutlet UILabel *beaconRange;
+@property (strong, nonatomic) IBOutlet UILabel *beaconStatus;
 
 - (IBAction)justSelectedBeacon:(id)sender;
 
