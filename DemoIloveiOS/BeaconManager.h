@@ -13,10 +13,10 @@
 @protocol BeaconManagerDelegate <NSObject>
 
 @optional
--(void)BMLocationUnknown:(NSString *)proximity;
--(void)BMLocationFar:(NSString *)proximity;
--(void)BMLocationNear:(NSString *)proximity;
--(void)BMLocationInmediate:(NSString *)proximity;
+-(void)BMLocationIsUnknown:(CLBeacon *)beacon;
+-(void)BMLocationIsFar:(CLBeacon *)beacon;
+-(void)BMLocationIsNear:(CLBeacon *)beacon;
+-(void)BMLocationIsInmediate:(CLBeacon *)beacon;
 @end
 
 

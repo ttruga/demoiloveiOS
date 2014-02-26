@@ -13,7 +13,7 @@
 #define UUID_BEACON_1 @"B9407F30-F5F8-466E-AFF9-25556B57FE6D" //GREEN GECKO
 #define UUID_BEACON_2 @"74278BDA-B644-4520-8F0C-720EAF059935" //RASPBERRY PI
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <BeaconManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *beaconSelector;
 @property (strong, nonatomic) IBOutlet UILabel *beaconName;

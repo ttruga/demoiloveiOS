@@ -129,6 +129,8 @@
 {
     
     NSLog(@"Detected beacons: %@", beacons);
+    NSLog(@"in region: %@", region);
+    
     
     if ([beacons count] > 0) {
         
@@ -144,28 +146,28 @@
             case CLProximityUnknown:
             
                 proximity = @"Unknown Proximity";
-                [self.delegate BMLocationUnknown:proximity];
+                [self.delegate BMLocationIsUnknown:beacon];
             
                 break;
             
             case CLProximityImmediate:
             
                 proximity = @"Immediate";
-                [self.delegate BMLocationInmediate:proximity];
+                [self.delegate BMLocationIsInmediate:beacon];
             
                 break;
             
             case CLProximityNear:
             
                 proximity = @"Near";
-                [self.delegate BMLocationNear:proximity];
+                [self.delegate BMLocationIsNear:beacon];
             
                 break;
             
             case CLProximityFar:
             
                 proximity = @"Far";
-                [self.delegate BMLocationFar:proximity];
+                [self.delegate BMLocationIsFar:beacon];
             
                 break;
             

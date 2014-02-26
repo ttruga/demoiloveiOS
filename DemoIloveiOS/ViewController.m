@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     BeaconManager * BM = [BeaconManager sharedInstance];
+    BM.delegate = self; 
     [BM initialize];
     
 }
@@ -29,7 +30,6 @@
 }
 
 
-
 - (IBAction)justSelectedBeacon:(id)sender {
     
     
@@ -38,20 +38,26 @@
     NSDictionary * greengecko = @{ @"uuid" : UUID_BEACON_1, @"identifier" : @"Green Gecko"};
     NSDictionary * rasppi     = @{ @"uuid" : UUID_BEACON_2, @"identifier" : @"Rasp Pi"};
     
+    NSString * beaconName;
+    
     UISegmentedControl * scontrol = (UISegmentedControl *) sender;
     
     switch (scontrol.selectedSegmentIndex) {
         
         case 0:
             
-            NSLog(@"Green Gecko");
+            beaconName = [greengecko objectForKey:@"identifier"];
+            NSLog(@"%@", beaconName);
+            self.beaconName.text = beaconName;
             [BM useRegionForBeacon:greengecko];
             
             break;
             
         case 1:
             
-            NSLog(@"Rasp-PI");
+            beaconName = [rasppi objectForKey:@"identifier"];
+            NSLog(@"%@", beaconName);
+            self.beaconName.text = beaconName;
             [BM useRegionForBeacon:rasppi];
             
             break;
@@ -61,5 +67,31 @@
     }
     
 }
+
+
+#pragma mark - BeaconDelegate
+
+-(void)BMLocationIsFar:(CLBeacon *)beacon{
+   
+
+}
+
+-(void) BMLocationIsNear:(CLBeacon *)beacon{
+
+}
+
+-(void) BMLocationIsInmediate:(CLBeacon *)beacon {
+
+
+
+}
+
+-(void) BMLocationIsUnknown:(CLBeacon *)beacon{
+
+
+
+}
+
+
 
 @end
