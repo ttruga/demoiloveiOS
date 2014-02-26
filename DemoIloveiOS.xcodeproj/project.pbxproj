@@ -21,6 +21,8 @@
 		D60C766918BE27290086CC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60C764B18BE27290086CC97 /* UIKit.framework */; };
 		D60C767118BE27290086CC97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D60C766F18BE27290086CC97 /* InfoPlist.strings */; };
 		D60C767318BE27290086CC97 /* DemoIloveiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C767218BE27290086CC97 /* DemoIloveiOSTests.m */; };
+		D60C767E18BE276C0086CC97 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C767D18BE276C0086CC97 /* BeaconManager.m */; };
+		D60C768018BE27FD0086CC97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60C767F18BE27FD0086CC97 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		D60C766E18BE27290086CC97 /* DemoIloveiOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoIloveiOSTests-Info.plist"; sourceTree = "<group>"; };
 		D60C767018BE27290086CC97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D60C767218BE27290086CC97 /* DemoIloveiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoIloveiOSTests.m; sourceTree = "<group>"; };
+		D60C767C18BE276C0086CC97 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconManager.h; sourceTree = "<group>"; };
+		D60C767D18BE276C0086CC97 /* BeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconManager.m; sourceTree = "<group>"; };
+		D60C767F18BE27FD0086CC97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60C768018BE27FD0086CC97 /* CoreLocation.framework in Frameworks */,
 				D60C764A18BE27290086CC97 /* CoreGraphics.framework in Frameworks */,
 				D60C764C18BE27290086CC97 /* UIKit.framework in Frameworks */,
 				D60C764818BE27290086CC97 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		D60C764618BE27290086CC97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D60C767F18BE27FD0086CC97 /* CoreLocation.framework */,
 				D60C764718BE27290086CC97 /* Foundation.framework */,
 				D60C764918BE27290086CC97 /* CoreGraphics.framework */,
 				D60C764B18BE27290086CC97 /* UIKit.framework */,
@@ -114,6 +121,8 @@
 			children = (
 				D60C765618BE27290086CC97 /* AppDelegate.h */,
 				D60C765718BE27290086CC97 /* AppDelegate.m */,
+				D60C767C18BE276C0086CC97 /* BeaconManager.h */,
+				D60C767D18BE276C0086CC97 /* BeaconManager.m */,
 				D60C765918BE27290086CC97 /* Main.storyboard */,
 				D60C765C18BE27290086CC97 /* ViewController.h */,
 				D60C765D18BE27290086CC97 /* ViewController.m */,
@@ -250,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60C765E18BE27290086CC97 /* ViewController.m in Sources */,
+				D60C767E18BE276C0086CC97 /* BeaconManager.m in Sources */,
 				D60C765818BE27290086CC97 /* AppDelegate.m in Sources */,
 				D60C765418BE27290086CC97 /* main.m in Sources */,
 			);
